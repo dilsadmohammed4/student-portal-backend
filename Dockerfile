@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests
 FROM amazoncorretto:17-alpine-jdk
 LABEL maintainer="dilsadmohammed4"
 WORKDIR /app
-COPY --from=build /app/target/student-portal-backend-1.0.0.jar student-portal-backend-1.0.0.jar
+COPY --from=build /app/target/student-portal-backend-1.0.0.jar /app
 EXPOSE 9000
 ENTRYPOINT ["java", "-jar", "student-portal-backend-1.0.0.jar"]

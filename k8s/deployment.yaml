@@ -23,4 +23,4 @@ spec:
             - name: SPRING_DATASOURCE_USERNAME
               value: dilsad
             - name: SPRING_DATASOURCE_PASSWORD
-              value: dilsad123
+              value: dilsad1234
