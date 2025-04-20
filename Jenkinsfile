@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "dilsadmohammed/student-portal-backend"
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_NAME = "dilsadmohammed4/student-portal-backend"
+        IMAGE_TAG = "1.0.0"
         REGISTRY_CREDENTIALS = 'dockerhub-credentials' // Jenkins credential ID
     }
 
