@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'maven3' // Matches the name from Global Tool Configuration
+    }
+
     environment {
         IMAGE_NAME = "dilsadmohammed/student-portal-backend"
         IMAGE_TAG = "${BUILD_NUMBER}"
