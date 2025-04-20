@@ -17,4 +17,4 @@ FROM amazoncorretto:17-alpine-jdk
 WORKDIR /app
 COPY target/student-portal-backend-1.0.0.jar student-portal-backend-1.0.0.jar
 EXPOSE 9000
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "student-portal-backend-1.0.0.jar"]
