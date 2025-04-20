@@ -42,7 +42,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh """
-                kubectl set image deployment/student-portal-deployment student-portal=$IMAGE_NAME:$IMAGE_TAG --namespace=default
+                kubectl set image deployment/student-portal-deployment student-portal-backend=$IMAGE_NAME:$IMAGE_TAG --namespace=default
                 """
             }
         }

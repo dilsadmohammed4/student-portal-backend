@@ -13,7 +13,7 @@ spec:
         app: student-portal-backend
     spec:
       containers:
-        - name: student-portal
+        - name: student-portal-backend
           image: dilsadmohammed/student-portal-backend:latest
           ports:
             - containerPort: 9000
