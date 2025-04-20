@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-portal-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-portal-backend
+  template:
+    metadata:
+      labels:
+        app: student-portal-backend
+    spec:
+      containers:
+        - name: student-portal
+          image: dilsadmohammed/student-portal-backend:latest
+          ports:
+            - containerPort: 9000
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql-service:3306/stmDb?createDatabaseIfNotExist=true
+            - name: SPRING_DATASOURCE_USERNAME
+              value: dilsad
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: dilsad123
