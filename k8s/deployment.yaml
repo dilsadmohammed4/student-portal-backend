@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: student-portal-backend
-          image: dilsadmohammed/student-portal-backend:1.0.0
+          image: dilsadmohammed4/student-portal-backend:1.0.0
           ports:
             - containerPort: 9000
           env:
