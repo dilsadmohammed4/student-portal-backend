@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: student-portal-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: student-portal-backend
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: student-portal-backend
-          image: dilsadmohammed/student-portal-backend:latest
+          image: dilsadmohammed/student-portal-backend:1.0.0
           ports:
             - containerPort: 9000
           env:
