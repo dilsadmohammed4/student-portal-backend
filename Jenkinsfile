@@ -43,9 +43,15 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
-                # Apply deployment and service YAMLs (optional but preferred)
-                kubectl apply -f k8s/deployment.yaml
-                kubectl apply -f k8s/service.yaml
+				# Apply MySQL configs first
+        		kubectl apply -f k8s/mysql-pv.yaml
+        		kubectl apply -f k8s/mysql-pvc.yaml
+        		kubectl apply -f k8s/mysql-deployment.yaml
+        		kubectl apply -f k8s/mysql-service.yaml
+
+        		# Apply application deployment and service
+        		kubectl apply -f k8s/deployment.yaml
+        		kubectl apply -f k8s/service.yaml
 
                 # Then update the image
                 kubectl set image deployment/student-portal-deployment student-portal-backend=$IMAGE_NAME:$IMAGE_TAG --namespace=default
