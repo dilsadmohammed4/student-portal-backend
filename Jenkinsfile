@@ -9,7 +9,7 @@ pipeline {
         IMAGE_NAME = "dilsadmohammed4/student-portal-backend"
         IMAGE_TAG = "1.0.0"
         REGISTRY_CREDENTIALS = 'dockerhub-credentials' // Jenkins credential ID
-        KUBECONFIG = 'C:\Users\dilsa\.kube\config' // Full path (e.g., C:\Users\dilsa\.kube\config or /home/jenkins/.kube/config)
+        KUBECONFIG = 'C:/Users/dilsa/.kube/config' // Full path (e.g., C:\Users\dilsa\.kube\config or /home/jenkins/.kube/config)
     }
 
     stages {
